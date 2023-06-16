@@ -9,7 +9,12 @@
 body {
   /* background-image: linear-gradient(100deg, #dbd5ed, #f3e7ea); */
   /* background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(76, 70, 100)); */
-  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(74, 89, 109));
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0),
+    rgb(74, 89, 95)
+  );
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 a .btn-home {
   text-decoration: none;
@@ -38,7 +43,11 @@ section.home .banner h1 {
 }
 
 section.home .banner p {
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: 400;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+
 }
 section.home .banner a {
   text-decoration: none;
@@ -85,8 +94,17 @@ section.about .about-img img {
   border-radius: 25px;
 }
 section.about .about-contain .about-title {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 400;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+}
+.skills h6{
+  font-size: 22px;
+  font-weight: 400;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  padding-top: 28px;
 }
 section.skills .skill-content .progress-body {
   margin: 10px 0;
@@ -115,91 +133,63 @@ section.contact .contact-info .form h4 {
 section.contact .contact-info .form p {
   font-size: 22px;
 }
-@media only screen and (max-width: 1142px) {
-  section.home .banner-img img {
-    margin-top: 50px;
-  }
+/* Education */
+.education .container .contents{
+ padding: 0px 30px;
+ border-left: 2px solid #bababa;
 }
-@media only screen and (max-width: 1120px) {
-  section.home .banner-img {
-    text-align: center;
-  }
+.contents .box{
+  position: relative;
+  padding: 20px;
+  border: 1px solid #eaeaea;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.4s;
+  margin-bottom: 20px;
+}
+.contents .box:hover{
+  box-shadow: 0px 3px 12px 0px #ccc;
+  border: 1px solid transparent;
+}
+.contents .box::before{
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  right: calc(100% + 22px);
+  top: 0;
+  background-color: #4c7bae !important;
+  border: 2px solid white;
+}
+.box h4{
+  position: relative;
+  color: #4c7bae !important;
+}
+.box h3{
+  font-size: 19px;
+  padding: 10px 0px 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #444;
+}
+.box p{
+  line-height: 1.2;
+  color: #666;
+  font-size: 17px;
+}
+/* Projects */
+.projects p{
+  margin-bottom: 0;
+  font-family: system-ui;
+}
+.projects h5 {
+  margin-bottom: 0.75rem;
+  font-family: system-ui;
+}
+.projects .card.animate{
+  width: 19rem;
 }
 
-@media only screen and (max-width: 1120px) {
-  section.about .about-contain .about-title {
-    margin-top: 20px;
-  }
-}
-@media only screen and (max-width: 576px) {
-  section.home .banner-img img {
-    border-radius: 45px;
-    height: 400px;
-    width: 300px;
-  }
-}
-@media only screen and (max-width: 1120px) {
-  section.about .about-img {
-    text-align: center;
-  }
-}
-@media only screen and (max-width: 576px) {
-  section.about .about-img img {
-    height: 300px;
-    width: 400px;
-    .word-animation .animated-word {
-      opacity: 0;
-      animation: wordAnimation 2s infinite;
-    }
-
-    @keyframes wordAnimation {
-      0% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-
-    .word-animation .animated-word:first-child {
-      animation-delay: 0s;
-    }
-
-    .word-animation .animated-word:nth-child(2) {
-      animation-delay: 1s;
-    }
-  }
-}
-@media only screen and (max-width: 576px) {
-  .table td {
-    padding: 10px;
-  }
-}
-@media only screen and (max-width: 1120px) {
-  .card {
-    margin-bottom: 20px;
-  }
-}
-/* @media only screen and (max-width: 495px) {
-    .col-xl-6 lg-6 md-6 sm-6{
-        margin-left: 100px;
-    }
-    section.home .banner h1 {
-        font-weight: bold;
-        color: #2674c8!important;
-        font-size: 22px;
-    }
-    .Frontend{
-        font-size: 20px;
-    }
-    section.home .banner p {
-        font-size: 14px;    
-        padding-right: 120px;
-    }
-  } */
 
 /* Animations */
 .navbar-nav .nav-item .nav-link {
@@ -209,8 +199,6 @@ section.contact .contact-info .form p {
 .navbar-nav .nav-item .nav-link:hover {
   transform: scale(1.1);
 }
-
-
 .word-animation {
   opacity: 0;
   animation: slideInFromLeft 1s forwards;
@@ -261,24 +249,6 @@ section.contact .contact-info .form p {
   }
 }
 
-.about-title {
-  opacity: 0;
-  transform: translateX(-100%);
-  animation: slideInLeft 0.5s forwards;
-}
-
-.about-title {
-  opacity: 0;
-  transform: translateX(-100%);
-  animation: slideInLeft 3s forwards;
-}
-
-.about-img {
-  opacity: 0;
-  transform: translateX(100%);
-  animation: slideInRight 3s forwards;
-}
-
 @keyframes slideInLeft {
   0% {
     opacity: 0;
@@ -301,7 +271,24 @@ section.contact .contact-info .form p {
   }
 }
 
-/* projects */
+.about-title {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInLeft 0.5s forwards;
+}
+
+.about-title {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInLeft 3s forwards;
+}
+
+.about-img {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slideInRight 3s forwards;
+}
+
 .projects .card {
   opacity: 0;
   transform: translateX(-20px);
@@ -316,7 +303,6 @@ section.contact .contact-info .form p {
 .projects .card:hover {
   transform: scale(1.1);
 }
-
 
 .animated {
   animation-duration: 1s;
@@ -336,3 +322,150 @@ section.contact .contact-info .form p {
   animation-name: fadeIn;
 }
 
+
+/* Media Query */
+@media only screen and (max-width: 1142px) {
+  section.home .banner-img img {
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .card {
+    margin-bottom: 20px;
+  }
+  section.about .about-img {
+    text-align: center;
+  }
+  section.about .about-contain .about-title {
+    margin-top: 20px;
+  }
+  section.home .banner-img {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  section.home .banner-img img {
+    border-radius: 45px;
+    height: 400px;
+    width: 300px;
+  }
+  .table td {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+
+  }
+  section.home .banner h1 {
+    font-weight: bold;
+    color: #2674c8 !important;
+    font-size: 28px;
+}
+.Frontend {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInFromBottom 1s forwards;
+  font-size: 21px;
+}
+section.home .banner-img img {
+  border-radius: 148px;
+  height: 290px;
+  width: 276px;
+}
+.head p {
+  font-size: 30px;
+}
+.head p span{
+  font-size: 30px;
+}
+section.about .about-img img {
+  height: 300px;
+  width: 300px;
+  border-radius: 54px;
+}
+.projects .card.animate{
+  margin-left: 10px;
+}
+section.contact .contact-info .mycon h4 {
+  font-size: 30px;
+}
+section.contact .contact-info .form h4 {
+    font-size: 24px;
+}
+.projects .row{
+  margin-left: 10px;
+}
+}
+@media only screen and (max-width: 375px){
+  .projects .row{
+    margin-left: -2px;
+  }
+}
+@media only screen and (max-width:280px) {
+  html{
+    width: 100%;
+  
+  }
+  body{
+    font-size: 20px;
+  }  
+  section.home .banner-img img{
+    height: 224px;
+    width: 235px;
+  }
+  section.about .about-img img{
+    height: 200px;
+    width: 226px;
+  }
+  .projects .card.animate{
+    width: 14rem;
+    margin-left: -4px;
+  }
+  .card-text:last-child {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+.projects h5 {
+  margin-bottom: 0.75rem;
+  font-family: system-ui;
+  font-size: 17px;
+}
+section.home .banner h1{
+  font-size: 20px;
+}
+section.home .banner p {
+  font-size: 17px;
+}
+section.home .banner .btn-home {
+  font-size: 17px;
+}
+.head p {
+  font-size: 25px;
+}
+.head p span {
+font-size: 25px;
+}
+section.about .about-contain .about-title {
+  font-size: 17px;
+}
+.skills h6 {
+  font-size: 17px;
+}
+section.contact .contact-info .mycon h4 {
+  font-size: 25px;
+}
+section.contact .contact-info .mycon .data ul li a{
+  font-size: 17px;
+}
+section.contact .contact-info .form h4 {
+  font-size: 20px;
+}
+section.contact .contact-info .form p {
+  font-size: 20px;
+}
+}
